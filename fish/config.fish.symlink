@@ -1,0 +1,29 @@
+set -gx EDITOR /usr/local/bin/nvim
+set -gx RBENV_ROOT /usr/local/var/rbenv
+set -gx PATH /usr/local/var/rbenv/shims $HOME/workarea/go/bin/ $PATH
+set -gx PATH $HOME/workarea/bin $PATH
+. (rbenv init -|psub)
+
+alias vi="/usr/local/bin/nvim"
+alias vim="/usr/local/bin/nvim"
+
+# Paths to your tackle
+set tacklebox_path ~/.tackle ~/.tacklebox
+
+# Theme
+set tacklebox_theme entropy
+
+# Which modules would you like to load? (modules can be found in ~/.tackle/modules/*)
+# Custom modules may be added to ~/.tacklebox/modules/
+# Example format: set tacklebox_modules virtualfish virtualhooks
+
+# Which plugins would you like to enable? (plugins can be found in ~/.tackle/plugins/*)
+# Custom plugins may be added to ~/.tacklebox/plugins/
+# Example format: set tacklebox_plugins python extract
+
+# Load Tacklebox configuration
+. ~/.tacklebox/tacklebox.fish
+
+for src in (find ~/.config/fish \( -name '*.fish' ! -name 'config.fish' \))
+  . $src
+end

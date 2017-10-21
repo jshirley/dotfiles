@@ -1,0 +1,5 @@
+[user]
+        name = jshirley
+        email = github@shirley.im
+[credential]
+        helper = osxkeychain
