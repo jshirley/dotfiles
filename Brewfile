@@ -21,6 +21,7 @@ brew 'tmux'
 brew 'the_platinum_searcher'
 brew 'vcprompt'
 
+cask 'arduino'
 cask 'docker'
 cask 'inkscape'
 cask 'minikube'
