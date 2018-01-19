@@ -119,7 +119,7 @@ set foldnestmax=10          " deepest fold is 10 levels
 set nofoldenable            " don't fold by default
 set foldlevel=1
 
-set clipboard=unnamed
+" set clipboard=unnamed
 
 set ttyfast                 " faster redrawing
 set diffopt+=vertical
@@ -245,10 +245,10 @@ nnoremap <silent> $ g$
 
 " search for word under the cursor
 nnoremap <leader>/ "fyiw :/<c-r>f<cr>
-
 " inoremap <tab> <c-r>=Smart_TabComplete()<CR>
 
 map <leader>r :call RunCustomCommand()<cr>
+
 " map <leader>s :call SetCustomCommand()<cr>
 let g:silent_custom_command = 0
 

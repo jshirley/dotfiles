@@ -2,7 +2,12 @@ set -gx EDITOR /usr/local/bin/nvim
 set -gx RBENV_ROOT /usr/local/var/rbenv
 set -gx PATH /usr/local/var/rbenv/shims $HOME/workarea/go/bin/ $PATH
 set -gx PATH $HOME/workarea/bin $PATH
+
+set -gx GOOGLE_APPLICATION_CREDENTIALS $HOME/.config/gcloud/DoneDid-0b1db8e6c26e.json
+
 . (rbenv init -|psub)
+
+alias wakepet="wakeonlan -i 192.168.7.255 -p 7 30:85:a9:90:3d:cf"
 
 alias vi="/usr/local/bin/nvim"
 alias vim="/usr/local/bin/nvim"
@@ -23,6 +28,10 @@ set tacklebox_theme entropy
 
 # Load Tacklebox configuration
 . ~/.tacklebox/tacklebox.fish
+
+# Load Google Cloud
+. ~/workarea/google-cloud-sdk/path.fish.inc
+#. ~/workarea/google-cloud-sdk/completion.fish.inc
 
 for src in (find ~/.config/fish \( -name '*.fish' ! -name 'config.fish' \))
   . $src

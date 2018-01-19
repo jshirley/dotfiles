@@ -15,3 +15,5 @@ set -g history-limit 10000
 
 # Set the escape timeout to 10ms so nvim <esc> is happy
 set -g escape-time 10
+
+set-option -g default-command "reattach-to-user-namespace -l fish"
