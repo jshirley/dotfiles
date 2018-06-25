@@ -1,7 +1,7 @@
 set -gx EDITOR /usr/local/bin/nvim
 set -gx RBENV_ROOT /usr/local/var/rbenv
 set -gx PATH /usr/local/var/rbenv/shims $HOME/workarea/go/bin/ $PATH
-set -gx PATH $HOME/workarea/bin $PATH
+set -gx PATH $HOME/workarea/bin $HOME/workarea/flutter/bin $PATH
 
 set -gx GOOGLE_APPLICATION_CREDENTIALS $HOME/.config/gcloud/DoneDid-0b1db8e6c26e.json
 
@@ -36,3 +36,4 @@ set tacklebox_theme entropy
 for src in (find ~/.config/fish \( -name '*.fish' ! -name 'config.fish' \))
   . $src
 end
+set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
