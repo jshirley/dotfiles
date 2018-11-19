@@ -1,2 +1,13 @@
 function s -d "switch to a working directory"
 end
+
+function gcloud-encrypt -d "Encrypt a file into Google KMS"
+  set -l project_id drivenasa-195414
+  set -l auth_token (gcloud auth print-access-token)
+  set -l contents (cat $argv)
+
+  curl -s -X POST "https://cloudkms.googleapis.com/v1/projects/$project_id/locations/global/keyRings/storage/cryptoKeys/appconfig:encrypt" \
+    -d "{\"plaintext\":\"$contents\"}" \
+    -H "Authorization:Bearer $auth_token" \
+    -H "Content-Type:application/json"
+end

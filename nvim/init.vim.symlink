@@ -22,6 +22,7 @@ abbr cosnt const
 abbr attribtue attribute
 abbr attribuet attribute
 
+set clipboard=unnamedplus
 set nocompatible            " not compatible with vi
 set autoread                " detect when a file is changed
 
@@ -121,8 +122,6 @@ set foldlevelstart=99
 set foldnestmax=10          " deepest fold is 10 levels
 set nofoldenable            " don't fold by default
 set foldlevel=1
-
-" set clipboard=unnamed
 
 set ttyfast                 " faster redrawing
 set diffopt+=vertical
