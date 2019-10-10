@@ -1,6 +1,9 @@
 cask_args appdir: '/Applications'
 
+tap 'AdoptOpenJDK/openjdk'
+
 brew 'ack'
+cask 'adoptopenjdk8'
 brew 'bazel'
 brew 'coreutils'
 brew 'dep'
@@ -25,10 +28,8 @@ brew 'the_platinum_searcher'
 brew 'yarn'
 brew 'vcprompt'
 
+cask 'google-cloud-sdk'
 cask 'arduino'
-cask 'docker'
-cask 'caskroom/versions/java8'
-cask 'minikube'
 cask 'ngrok'
 cask 'vlc'
 cask 'visual-studio-code'
