@@ -6,8 +6,10 @@ Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'Shougo/deoplete.nvim'
-Plug 'mhartington/nvim-typescript'
+" Plug 'mhartington/nvim-typescript'
+Plug 'mhartington/nvim-typescript', {'do': 'sh install.sh'}
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'jaxbot/github-issues.vim'
 
 call plug#end()
 
@@ -128,7 +130,7 @@ set diffopt+=vertical
 set laststatus=2            " show the satus line all the time
 set so=7                    " set 7 lines to the cursors - when moving vertical
 set wildmenu                " enhanced command line completion
-set hidden                  " current buffer can be put into background
+" set hidden                  " current buffer can be put into background
 set showcmd                 " show incomplete commands
 set noshowmode              " don't show which mode disabled for PowerLine
 set wildmode=list:longest   " complete files like a shell
@@ -296,14 +298,15 @@ augroup END
 
 " FZF
 """""""""""""""""""""""""""""""""""""
-" Toggle NERDTree
-nmap <silent> <leader>k :NERDTreeToggle<cr>
+" Toggle netrw
+let g:netrw_banner = 0
+nmap <silent> <leader>k :Sexplore<cr>
 " expand to the path of the file in the current buffer
-nmap <silent> <leader>y :NERDTreeFind<cr>
+nmap <silent> <leader>y :find<cr>
 
-let NERDTreeShowHidden=1
-let NERDTreeDirArrowExpandable = '▷'
-let NERDTreeDirArrowCollapsible = '▼'
+" let NERDTreeShowHidden=1
+" let NERDTreeDirArrowExpandable = '▷'
+" let NERDTreeDirArrowCollapsible = '▼'
 
 let g:fzf_layout = { 'down': '~25%' }
 

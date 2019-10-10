@@ -1,6 +1,7 @@
 set -gx EDITOR /usr/local/bin/nvim
 set -gx RBENV_ROOT /usr/local/var/rbenv
 
+set -gx PATH $HOME/workarea/bin/ $PATH
 set -gx PATH /usr/local/var/rbenv/shims $HOME/workarea/go/bin/ $PATH
 set -gx PATH $HOME/.pub-cache/bin $HOME/workarea/flutter/bin $PATH
 
@@ -45,3 +46,4 @@ for src in (find ~/.config/fish \( -name '*.fish' ! -name 'config.fish' \))
   . $src
 end
 set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/sqlite/bin" $fish_user_paths
